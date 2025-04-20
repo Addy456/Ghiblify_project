@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const navigate = useNavigate();
 
-  return (
+return (
     <div className='flex items-centre justify-between py-4'>
         <Link to  = '/'>
             <img src={assets.logo} alt="" className='w-28 sm:w-32 lg:w-40'/>
@@ -18,8 +18,8 @@ const Navbar = () => {
         <div>
             {
             user ?
-            <div className='flex items-centre gap-2 sm: gap-3'>
-                <button onClick={()=>navigate('/buy-credit')} className='flex items-centre gap-2 bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700'>
+            <div className='flex items-centre gap-2 sm:gap-3'>
+                <button onClick={()=>navigate('/buy-credit')} className='flex items-center justify-center gap-2 bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700'>
                     <img className='w-5'  src={assets.credit_star} alt="" />
                     <p className='text-xs sm:text-sm font-medium text-gray-600'>Credits left : {credit}</p>
                 </button>
@@ -36,7 +36,7 @@ const Navbar = () => {
                 </div>
             </div>
             :
-            <div className='flex items-centre gap-2 sm: gap-5'>
+            <div className='flex items-centre gap-2 sm:gap-5'>
                 <p onClick={()=>navigate('/buy-credit')}
                 className='cursor-pointer pt-2'>Pricing</p>
                 <button onClick={()=>setShowLogin(true)} className='bg-zinc-800 text-white px-7 py-2 sm:px-10 text-sm rounded-full'>Login</button>
